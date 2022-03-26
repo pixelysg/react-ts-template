@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf70b6bf-fac7-40c5-a704-181c14ff6cf2/deploy-status)](https://app.netlify.com/sites/pixely-react-template/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+It also comes with:
+
+- ESLint and Prettier (see `eslintConfig` in `package.json`)
+- commitlint and Commitizen
+
+TODO:
+
+- CircleCI
 
 ## Available Scripts
 
