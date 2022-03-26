@@ -1,4 +1,5 @@
 import React from "react";
+import Package from "../package.json";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -13,6 +14,9 @@ export const App: React.FunctionComponent = () => {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
+        <p style={{ fontSize: "10pt" }}>
+          Build v{Package.version}-{process.env.REACT_APP_COMMIT_REF}
+        </p>
       </header>
     </div>
   );
