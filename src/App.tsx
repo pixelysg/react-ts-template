@@ -1,23 +1,20 @@
 import React from "react";
-import Package from "../package.json";
-import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HomePage } from "./views/Home/Home";
+import { LandingPage } from "./views/Landing/Landing";
+
+const AppRouter = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export const App: React.FunctionComponent = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-        <p style={{ fontSize: "10pt" }}>
-          Build v{Package.version}-{process.env.REACT_APP_COMMIT_REF}
-        </p>
-      </header>
-    </div>
-  );
+  return <AppRouter />;
 };
